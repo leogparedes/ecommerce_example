@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style2.css">
+  <script src="js/functions.js" defer></script>
+  <title>Ecommerce - Productos</title>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <!-- Botón menú (mejor que <i>) -->
+      <button
+        type="button"
+        class="icon-button menuToggle"
+        aria-label="Abrir menú"
+        aria-expanded="false"
+        aria-controls="mainMenu"
+      >
+        <img src="img/menu.png" alt="" aria-hidden="true">
+      </button>
+
+      <a href="index.html" class="brand" aria-label="Ir a inicio">
+        <img src="img/images.png" alt="Logo de Adidas">
+      </a>
+
+      <!-- Botón carrito -->
+      <button
+        type="button"
+        class="icon-button cartToggle"
+        aria-label="Abrir carrito"
+        aria-expanded="false"
+        aria-controls="cartPanel"
+      >
+        <img src="img/cart.png" alt="" aria-hidden="true" class="cartLogo">
+      </button>
+      <!-- El badge lo inyecta JS -->
+    </div>
+
+    <nav class="top-nav" role="navigation" aria-label="Navegación principal">
+      <a href="index.html" aria-current="page">Productos</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+  </header>
+
+  <main id="contenido" class="site-main">
+    <section class="banner" aria-label="Sección de novedades">
+      <h1>Productos nuevos</h1>
+      <p>
+        Conoce nuestros productos nuevos —
+        <span lang="en">New arrivals</span>
+      </p>
+    </section>
+
+    <section class="products" aria-label="Listado de productos">
+      <article class="product-card">
+        <img src="img/mexico.jpeg" alt="Jersey de México 2023 en color verde">
+        <h2>Mexico 2023 jersey</h2>
+        <p class="price">$1000</p>
+        <button class="buyButton" type="button" aria-label="Agregar Mexico 2023 jersey al carrito">
+          Comprar
+        </button>
+      </article>
+
+      <article class="product-card">
+        <img src="img/chamarra.webp" alt="Chamarra color beige con cierre">
+        <h2>Chamarra</h2>
+        <p class="price">$2000</p>
+        <button class="buyButton" type="button" aria-label="Agregar chamarra al carrito">
+          Comprar
+        </button>
+      </article>
+
+      <article class="product-card">
+        <img src="img/tenis.webp" alt="Tenis blancos Adidas con franjas grises">
+        <h2>Tenis</h2>
+        <p class="price">$3000</p>
+        <button class="buyButton" type="button" aria-label="Agregar tenis al carrito">
+          Comprar
+        </button>
+      </article>
+    </section>
+
+    <!-- CARRITO (aria role 1) -->
+    <aside
+      class="cart"
+      id="cartPanel"
+      role="dialog"
+      aria-label="Carrito de compras"
+      aria-hidden="true"
+    >
+      <h2>CARRITO</h2>
+
+      <div id="cart-items" aria-live="polite" aria-label="Productos en el carrito"></div>
+
+      <button type="button" class="icon-button closeCart" aria-label="Cerrar carrito">
+        <img src="img/x.svg" alt="" aria-hidden="true">
+      </button>
+    </aside>
+
+    <!-- MENÚ (aria role 2) -->
+    <aside
+      class="menu"
+      id="mainMenu"
+      role="dialog"
+      aria-label="Menú lateral"
+      aria-hidden="true"
+    >
+      <h2>Menú</h2>
+
+      <button type="button" class="icon-button closeMenu" aria-label="Cerrar menú">
+        <img src="img/x.svg" alt="" aria-hidden="true">
+      </button>
+
+      <nav class="menu-content" role="navigation" aria-label="Enlaces del menú">
+        <a href="index.html">Productos</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+    </aside>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 - Ecommerce DOM</p>
+  </footer>
+</body>
+</html>
